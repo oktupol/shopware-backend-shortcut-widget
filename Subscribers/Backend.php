@@ -49,7 +49,6 @@ class Backend implements SubscriberInterface
      */
     public function onPostDispatchSecureBackendIndex(\Enlight_Controller_ActionEventArgs $eventArgs)
     {
-//        return;
         /** @var \Shopware_Controllers_Backend_Index $controller */
         $controller = $eventArgs->getSubject();
         $request = $controller->Request();
