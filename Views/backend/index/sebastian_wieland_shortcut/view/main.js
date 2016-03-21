@@ -12,7 +12,7 @@ Ext.define('Shopware.apps.Index.sebastianWielandShortcutWidget.view.Main', {
         handles: 's'
     },
 
-    minHeight: 250,
+    minHeight: 120,
     maxHeight: 600,
 
     initComponent: function () {
@@ -39,12 +39,7 @@ Ext.define('Shopware.apps.Index.sebastianWielandShortcutWidget.view.Main', {
         return Ext.create('Ext.grid.Panel', {
             border: 0,
             store: me.shortcutStore,
-            columns: me.createColumns(),
-            bbar: {
-                xtype: 'pagingtoolbar',
-                displayInfo: true,
-                store: me.shortcutStore
-            }
+            columns: me.createColumns()
         });
     },
 
@@ -92,7 +87,7 @@ Ext.define('Shopware.apps.Index.sebastianWielandShortcutWidget.view.Main', {
 
                                         switch (parameter.type) {
                                             case 0:
-                                                value = parameter.value == true;
+                                                value = 'true' == parameter.value.toLowerCase();
                                                 break;
                                             case 1:
                                             case 2:
@@ -125,7 +120,7 @@ Ext.define('Shopware.apps.Index.sebastianWielandShortcutWidget.view.Main', {
             return;
         }
 
-        me.accountStore.reload();
+        me.shortcutStore.reload();
     }
 });
 //{/block}
