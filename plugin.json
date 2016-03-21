@@ -1,8 +1,8 @@
 {
   "label": "Backend Shortcuts",
   "description": "Backend Shortcuts",
-  "link": "https://github.com/sebastianwieland/shopware-backend-shortcut-widget",
-  "author": "Sebastian Wieland <sebasti@nwie.land>",
+  "link": "http://sebastianwie.land/",
+  "author": "Sebastian Wieland",
   "currentVersion": "0.0.1",
   "compatibility": {
     "minimumVersion": "5.1.3",
