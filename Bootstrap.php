@@ -31,6 +31,10 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
         return $this->setupInstances;
     }
 
+    /**
+     * Event-Listener, that registers all subscribers of this plugin
+     * @throws Exception
+     */
     public function onFrontStartDispatch()
     {
         if (!$this->isCompatibleWithCurrentShopwareVersion()) {
@@ -113,6 +117,9 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
         );
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getCapabilities()
     {
         return array(

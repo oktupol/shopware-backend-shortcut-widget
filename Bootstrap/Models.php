@@ -17,6 +17,10 @@ class Models extends SetupInstanceBase
     /** @var ModelManager */
     protected $entityManager;
 
+    /**
+     * Models constructor.
+     * @param \Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap $bootstrap
+     */
     public function __construct(\Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap $bootstrap)
     {
         parent::__construct($bootstrap);
