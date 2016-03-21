@@ -35,8 +35,14 @@ class Shortcut extends ModelEntity
     protected $name;
 
     /**
+     * @var string $link
+     * @ORM\Column(name="link", type="string", nullable=true)
+     */
+    protected $link;
+
+    /**
      * @var string $subApplication
-     * @ORM\Column(name="sub_application", type="string")
+     * @ORM\Column(name="sub_application", type="string", nullable=true)
      */
     protected $subApplication;
 
@@ -74,6 +80,22 @@ class Shortcut extends ModelEntity
     {
         $this->name = $name;
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * @param string $link
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
     }
 
     /**
