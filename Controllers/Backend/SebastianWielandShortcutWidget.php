@@ -14,6 +14,19 @@ class Shopware_Controllers_Backend_SebastianWielandShortcutWidget extends Shopwa
     /**
      * @inheritdoc
      */
+    protected function getListQuery()
+    {
+        $builder = parent::getListQuery();
+
+        $builder->leftJoin('shortcut.parameters', 'parameters');
+        $builder->addSelect(array('parameters'));
+
+        return $builder;
+    }
+
+    /**
+     * @inheritdoc
+     */
     protected function getAdditionalDetailData(array $data)
     {
         $data['parameters'] = array();

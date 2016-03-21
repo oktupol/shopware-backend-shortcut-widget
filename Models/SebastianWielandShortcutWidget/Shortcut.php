@@ -48,6 +48,12 @@ class Shortcut extends ModelEntity
     protected $subApplication;
 
     /**
+     * @var string $action
+     * @ORM\Column(name="action", type="string", nullable=true)
+     */
+    protected $action;
+
+    /**
      * @var Parameter[]
      * @ORM\OneToMany(
      *     targetEntity="Shopware\CustomModels\SebastianWielandShortcutWidget\Parameter",
@@ -119,6 +125,24 @@ class Shortcut extends ModelEntity
     public function setSubApplication($subApplication)
     {
         $this->subApplication = $subApplication;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAction()
+    {
+        return $this->action;
+    }
+
+    /**
+     * @param string $action
+     * @return $this
+     */
+    public function setAction($action)
+    {
+        $this->action = $action;
         return $this;
     }
 

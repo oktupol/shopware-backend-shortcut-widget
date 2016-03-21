@@ -17,7 +17,7 @@ Ext.define('Shopware.apps.SebastianWielandShortcutWidget.model.Parameter', {
         //{block name="backend/sebastian_wieland_shortcut_widget/model/parameter/fields"}{/block}
         { name: 'id', type: 'int', useNull: true },
         { name: 'name', type: 'string' },
-        { name: 'type', type: 'int' },
+        { name: 'type', type: 'int', defaultValue: 3 },
         { name: 'value', type: 'string' },
         { name: 'shortcutId', type: 'int' }
     ]

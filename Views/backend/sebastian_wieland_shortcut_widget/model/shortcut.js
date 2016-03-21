@@ -19,7 +19,8 @@ Ext.define('Shopware.apps.SebastianWielandShortcutWidget.model.Shortcut', {
         { name: 'id', type: 'int', useNull: true },
         { name: 'name', type: 'string' },
         { name: 'link', type: 'string' },
-        { name: 'subApplication', type: 'string' }
+        { name: 'subApplication', type: 'string' },
+        { name: 'action', type: 'string' }
     ],
 
     associations: [

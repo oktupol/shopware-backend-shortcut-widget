@@ -26,6 +26,10 @@ Ext.define('Shopware.apps.SebastianWielandShortcutWidget.view.list.Shortcuts', {
                 subApplication: {
                     header: '{s name=view/list/shortcut/sub_application}Backend-SubApplication{/s}',
                     flex: 2
+                },
+                action: {
+                    header: '{s name=view/list/shortcut/action}Action{/s}',
+                    flex: 1
                 }
             }
         };

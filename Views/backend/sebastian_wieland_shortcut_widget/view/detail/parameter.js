@@ -14,6 +14,7 @@ Ext.define('Shopware.apps.SebastianWielandShortcutWidget.view.detail.Parameter',
 
         return {
             rowEditing: true,
+            pagingbar: false,
 
             columns: {
                 name: {
