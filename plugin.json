@@ -3,7 +3,7 @@
   "description": "Backend Shortcuts",
   "link": "http://sebastianwie.land/",
   "author": "Sebastian Wieland",
-  "currentVersion": "0.0.1",
+  "currentVersion": "0.9.0",
   "compatibility": {
     "minimumVersion": "5.1.3",
     "maximumVersion": null,

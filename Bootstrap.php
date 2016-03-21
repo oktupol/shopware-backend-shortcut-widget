@@ -113,6 +113,16 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
         );
     }
 
+    public function getCapabilities()
+    {
+        return array(
+            'install' => true,
+            'update' => true,
+            'enable' => true,
+            'secureUninstall' => true
+        );
+    }
+
     /**
      * @return bool
      */

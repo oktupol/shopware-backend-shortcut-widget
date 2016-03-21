@@ -30,7 +30,7 @@ Ext.define('Shopware.apps.SebastianWielandShortcutWidget.view.detail.Shortcut', 
                     subApplication: {
                         fieldLabel: '{s name=view/detail/shortcut/sub_application}Backend-SubApplication{/s}'
                     },
-                    action: {
+                    subApplicationAction: {
                         fieldLabel: '{s name=view/detail/shortcut/action}Action{/s}'
                     }
                 }

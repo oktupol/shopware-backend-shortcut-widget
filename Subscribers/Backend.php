@@ -49,7 +49,7 @@ class Backend implements SubscriberInterface
      */
     public function onPostDispatchSecureBackendIndex(\Enlight_Controller_ActionEventArgs $eventArgs)
     {
-        return;
+//        return;
         /** @var \Shopware_Controllers_Backend_Index $controller */
         $controller = $eventArgs->getSubject();
         $request = $controller->Request();
@@ -67,6 +67,6 @@ class Backend implements SubscriberInterface
                 $templatesToExtend = array();
         }
 
-        for ($i = 0, $l = count($templatesToExtend); $i < $l; $view->extendsTemplate('backend/sebastian_wieland_shortcut_widget_index/' . $templatesToExtend[$i++])) ;
+        for ($i = 0, $l = count($templatesToExtend); $i < $l; $view->extendsTemplate('backend/index/sebastian_wieland_shortcut/' . $templatesToExtend[$i++])) ;
     }
 }

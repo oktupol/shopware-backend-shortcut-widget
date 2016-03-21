@@ -51,7 +51,7 @@ class Shortcut extends ModelEntity
      * @var string $action
      * @ORM\Column(name="action", type="string", nullable=true)
      */
-    protected $action;
+    protected $subApplicationAction;
 
     /**
      * @var Parameter[]
@@ -131,18 +131,18 @@ class Shortcut extends ModelEntity
     /**
      * @return string
      */
-    public function getAction()
+    public function getSubApplicationAction()
     {
-        return $this->action;
+        return $this->subApplicationAction;
     }
 
     /**
-     * @param string $action
+     * @param string $subApplicationAction
      * @return $this
      */
-    public function setAction($action)
+    public function setSubApplicationAction($subApplicationAction)
     {
-        $this->action = $action;
+        $this->subApplicationAction = $subApplicationAction;
         return $this;
     }
 
