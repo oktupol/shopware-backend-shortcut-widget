@@ -45,16 +45,17 @@ class Backend implements SubscriberInterface
     }
 
     /**
-     * @param \Enlight_Controller_EventArgs $eventArgs
+     * @param \Enlight_Controller_ActionEventArgs $eventArgs
      */
-    public function onPostDispatchBackendIndex(\Enlight_Controller_EventArgs $eventArgs)
+    public function onPostDispatchSecureBackendIndex(\Enlight_Controller_ActionEventArgs $eventArgs)
     {
+        return;
         /** @var \Shopware_Controllers_Backend_Index $controller */
         $controller = $eventArgs->getSubject();
         $request = $controller->Request();
         $view = $controller->View();
 
-        $view->addTemplateDir($this->bootstrap->Path . 'Views/extjs/');
+        $view->addTemplateDir($this->bootstrap->Path() . 'Views/');
 
         switch ($request->getActionName()) {
             case 'index':

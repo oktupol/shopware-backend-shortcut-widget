@@ -10,4 +10,13 @@ class Shopware_Controllers_Backend_SebastianWielandShortcutWidget extends Shopwa
 {
     protected $model = 'Shopware\CustomModels\SebastianWielandShortcutWidget\Shortcut';
     protected $alias = 'shortcut';
+
+    /**
+     * @inheritdoc
+     */
+    protected function getAdditionalDetailData(array $data)
+    {
+        $data['parameters'] = array();
+        return $data;
+    }
 }

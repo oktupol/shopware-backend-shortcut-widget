@@ -18,6 +18,14 @@ class Widget extends SetupInstanceBase
     {
         $this->bootstrap->createWidget('sebastian-wieland-shortcut');
         $this->bootstrap->registerController('Backend', $this->bootstrap->getName());
+        $this->bootstrap->createMenuItem(array(
+            'label' => 'Shortcuts',
+            'controller' => $this->bootstrap->getName(),
+            'action' => 'Index',
+            'class' => 'sprite-documents',
+            'active' => true,
+            'parent' => $this->bootstrap->Menu()->findOneBy(array('label' => 'Einstellungen'))
+        ));
         return true;
     }
 }

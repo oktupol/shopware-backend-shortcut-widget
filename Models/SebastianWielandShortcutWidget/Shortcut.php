@@ -8,6 +8,7 @@
 
 namespace Shopware\CustomModels\SebastianWielandShortcutWidget;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Shopware\Components\Model\ModelEntity;
 
@@ -49,12 +50,17 @@ class Shortcut extends ModelEntity
     /**
      * @var Parameter[]
      * @ORM\OneToMany(
-     *     targetEntity="Shopware\CustomModels\SebastianWielandShortcutWidget\Shortcut",
+     *     targetEntity="Shopware\CustomModels\SebastianWielandShortcutWidget\Parameter",
      *     mappedBy="shortcut",
      *     cascade={"persist", "remove"}
      * )
      */
     protected $parameters;
+
+    public function __construct()
+    {
+        $this->parameters = new ArrayCollection();
+    }
 
     /**
      * @return int

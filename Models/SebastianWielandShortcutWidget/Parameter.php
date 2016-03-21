@@ -59,7 +59,7 @@ class Parameter extends ModelEntity
     protected $shortcutId;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Shopware\CustomModels\SebastianWielandShortcutWidget\Shortcut")
+     * @ORM\ManyToOne(targetEntity="Shopware\CustomModels\SebastianWielandShortcutWidget\Shortcut", inversedBy="parameters")
      * @ORM\JoinColumn(name="shortcut_id", referencedColumnName="id")
      */
     protected $shortcut;
@@ -109,52 +109,21 @@ class Parameter extends ModelEntity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getValue()
     {
-        switch ($this->getType()) {
-            case self::TYPE_BOOLEAN:
-                return (boolean)$this->value;
-            case self::TYPE_INTEGER:
-                return (integer)$this->value;
-            case self::TYPE_FLOAT:
-                return (float)$this->value;
-            case self::TYPE_JSON:
-                return json_decode($this->value);
-            default:
-                return $this->value;
-        }
+        return $this->value;
     }
 
     /**
-     * @param mixed $value
+     * @param string $value
      * @return $this
      */
     public function setValue($value)
     {
-        switch (gettype($value)) {
-            case 'boolean':
-                $this->setType(self::TYPE_BOOLEAN);
-                $this->setValue("$value");
-                return $this;
-            case 'integer':
-                $this->setType(self::TYPE_INTEGER);
-                $this->setValue("$value");
-                return $this;
-            case 'double':
-                $this->setType(self::TYPE_FLOAT);
-                $this->setValue("$value");
-                return $this;
-            case 'array':
-                $this->setType(self::TYPE_JSON);
-                $this->setValue(json_encode($value));
-                return $this;
-            default:
-                $this->setType(self::TYPE_STRING);
-                $this->setValue($value);
-                return $this;
-        }
+        $this->value = $value;
+        return $this;
     }
 
     /**
