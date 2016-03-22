@@ -130,7 +130,8 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
             'label' => $this->getLabel(),
             'description' => $this->getPluginInfo()['description'],
             'author' => $this->getPluginInfo()['author'],
-            'link' => $this->getPluginInfo()['link']
+            'link' => $this->getPluginInfo()['link'],
+            'license' => $this->getPluginInfo()['license']
         );
     }
 

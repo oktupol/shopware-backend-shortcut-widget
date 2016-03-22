@@ -9,5 +9,6 @@
     "maximumVersion": null,
     "blacklist": [
     ]
-  }
+  },
+  "license": "GNU GPL v3"
 }
