@@ -66,7 +66,15 @@ Ext.define('Shopware.apps.Index.sebastianWielandShortcutWidget.view.Main', {
             {
                 dataIndex: 'name',
                 header: '{s name=widget/view/main/name}Name{/s}',
-                flex: 1
+                flex: 1,
+                renderer: function (value, meta, record, row, col, store, gridPanel) {
+                    var link = record.get('link').trim();
+                    if ('' != link) {
+                        return '<a href="' + link + '" target="_blank">' + value + '</a>';
+                    } else {
+                        return value;
+                    }
+                }
             }, {
                 xtype: 'actioncolumn',
                 width: 50,
@@ -81,7 +89,7 @@ Ext.define('Shopware.apps.Index.sebastianWielandShortcutWidget.view.Main', {
                             }
                         }
                     }, {
-                        iconCls: 'sprite-application',
+                        iconCls: 'sprite-application-icon',
                         tooltip: '{s name=widget/view/main/open_backend}Im Backend öffnen{/s}',
                         handler: function (view, rowIndex, colIndex, item, event, record) {
                             var subApplicationName = record.get('subApplication').trim(),
