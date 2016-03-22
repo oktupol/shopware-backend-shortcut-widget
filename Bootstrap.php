@@ -214,7 +214,13 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
             }
         }
 
-        return true;
+        return array(
+            'success' => true,
+            'invalidateCache' => array(
+                'template',
+                'proxy'
+            )
+        );
     }
 
     /**
@@ -228,7 +234,13 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
             }
         }
 
-        return true;
+        return array(
+            'success' => true,
+            'invalidateCache' => array(
+                'template',
+                'proxy'
+            )
+        );
     }
 
     /**
@@ -242,7 +254,13 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
             }
         }
 
-        return true;
+        return array(
+            'success' => true,
+            'invalidateCache' => array(
+                'template',
+                'proxy'
+            )
+        );
     }
 
     /**
@@ -256,7 +274,13 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
             }
         }
 
-        return true;
+        return array(
+            'success' => true,
+            'invalidateCache' => array(
+                'template',
+                'proxy'
+            )
+        );
     }
 
     /**
@@ -270,6 +294,12 @@ class Shopware_Plugins_Backend_SebastianWielandShortcutWidget_Bootstrap extends 
             }
         }
 
-        return true;
+        return array(
+            'success' => true,
+            'invalidateCache' => array(
+                'template',
+                'proxy'
+            )
+        );
     }
 }
