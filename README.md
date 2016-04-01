@@ -25,3 +25,4 @@ A shortcut consists of three parts:
 |------|-----------------|------------------------|-------------------------------|-----------------------------------|
 | ANTIDOGMA | http://my-shop.com/antidogma | Shopware.apps.Article | index | articleId = 13 (integer) |
 | DIE ZEIT 100 | http://my-shop.com/die-zeit-100 | Shopware.apps.Article | index | articleId = 166 (integer) |
+| Clear Proxy-Cache | (empty) | Shopware.apps.Performance | Proxy | (none) |
